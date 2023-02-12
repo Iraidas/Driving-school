@@ -367,32 +367,32 @@
             </section>
             <section class="trainers">
                 <div class="container">
-                    <div class="trainers__caption">
-                        <h2 class="trainers__title">Инструкторы</h2>
-                        <select class="trainers__select region-select" name="region" id="region-select-1">
-                            <option class="trainers__option" selected value="Орехово-Зуево">Орехово-Зуево</option>
-                            <option class="trainers__option" value="Москва">Москва</option>
-                            <option class="trainers__option" value="Химки">Химки</option>
-                            <option class="trainers__option" value="Сергиев Посад">Сергиев Посад</option>
-                            <option class="trainers__option" value="Одинцово">Одинцово</option>
-                        </select>
-                        <p class="trainers__text">Эффективность обучения во многом зависит от инструктора, поэтому для нашей автошколы «Реал» мы отобрали квалифицированных водите-лей, имеющих не только большой стаж вождения, но и опыт в преподавании. Они доступно излагают материал, всегда готовы прийти на помощь, а также легко находят общий язык с аудиторией.</p>
-                        <p class="trainers__text">Для того чтобы вам проще было выбрать инструктора для себя, на нашем сайте реализована рейтинговая система. Вы сможете ознакомиться с портфолио конкретного специалиста, его оценкой и отзывами от предыдущих учеников.</p>
-                        <div class="trainers__button-group">
-                            <a class="trainers__link" href="#">Все инструкторы</a>
-                            <button class="trainers__slider-btn swiper-button-prev" type="button">
-                                <img class="trainers__btn-img" src="images/arrow-left.svg" alt="стрелка влево">
-                            </button>
-                            <button class="trainers__slider-btn swiper-button-next" type="button">
-                                <img class="trainers__btn-img" src="images/arrow-right.svg" alt="стрелка направо">
-                            </button>
+                    <div class="trainers__wrapper">
+                        <div class="trainers__caption">
+                            <h2 class="trainers__title">Инструкторы</h2>
+                            <select class="trainers__select region-select" name="region" id="region-select-1">
+                                <option class="trainers__option" selected value="Орехово-Зуево">Орехово-Зуево</option>
+                                <option class="trainers__option" value="Москва">Москва</option>
+                                <option class="trainers__option" value="Химки">Химки</option>
+                                <option class="trainers__option" value="Сергиев Посад">Сергиев Посад</option>
+                                <option class="trainers__option" value="Одинцово">Одинцово</option>
+                            </select>
+                            <p class="trainers__text">Эффективность обучения во многом зависит от инструктора, поэтому для нашей автошколы «Реал» мы отобрали квалифицированных водите-лей, имеющих не только большой стаж вождения, но и опыт в преподавании. Они доступно излагают материал, всегда готовы прийти на помощь, а также легко находят общий язык с аудиторией.</p>
+                            <p class="trainers__text">Для того чтобы вам проще было выбрать инструктора для себя, на нашем сайте реализована рейтинговая система. Вы сможете ознакомиться с портфолио конкретного специалиста, его оценкой и отзывами от предыдущих учеников.</p>
+                            <div class="trainers__button-group">
+                                <a class="trainers__link" href="#">Все инструкторы</a>
+                                <button class="trainers__slider-btn swiper-button-prev" type="button">
+                                    <img class="trainers__btn-img" src="images/arrow-left.svg" alt="стрелка влево">
+                                </button>
+                                <button class="trainers__slider-btn swiper-button-next" type="button">
+                                    <img class="trainers__btn-img" src="images/arrow-right.svg" alt="стрелка направо">
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="trainers__swiper swiper">
-                        <div class="trainers__wrapper swiper-wrapper">
-                            <div class="trainers__slide swiper-slide">
-                                <div class="trainers__card bg-white">
-                                    <div class="trainers__card-wrapper">
+                        <div class="trainers__swiper swiper">
+                            <div class="trainers__wrapper swiper-wrapper">
+                                <div class="trainers__slide swiper-slide">
+                                    <div class="trainers__card bg-white">
                                         <div class="trainers__img">
                                             <img src="images/ovchinnikov-vanya.png" alt="">
                                         </div>
@@ -403,9 +403,7 @@
                                             <span class="trainers__rating-num">4,9</span>
                                         </p>
                                     </div>
-                                </div>
-                                <div class="trainers__card bg-white">
-                                    <div class="trainers__card-wrapper">
+                                    <div class="trainers__card bg-white">
                                         <div class="trainers__img">
                                             <img src="images/permyakov-andrey.png" alt="">
                                         </div>
@@ -417,10 +415,8 @@
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="trainers__slide swiper-slide">
-                                <div class="trainers__card bg-white">
-                                    <div class="trainers__card-wrapper">
+                                <div class="trainers__slide swiper-slide">
+                                    <div class="trainers__card bg-white">
                                         <div class="trainers__img">
                                             <img src="images/ovchinnikov-vanya.png" alt="">
                                         </div>
@@ -431,9 +427,7 @@
                                             <span class="trainers__rating-num">4,9</span>
                                         </p>
                                     </div>
-                                </div>
-                                <div class="trainers__card bg-white">
-                                    <div class="trainers__card-wrapper">
+                                    <div class="trainers__card bg-white">
                                         <div class="trainers__img">
                                             <img src="images/permyakov-andrey.png" alt="">
                                         </div>
@@ -477,7 +471,7 @@
                         </div>
                         <form class="registration__form feedback-form" action="#">
                             <input class="registration__input feedback-input" type="text" placeholder="Ваше имя">
-                            <input class="registration__input feedback-input" type="number" placeholder="Ваш номер телефона">
+                            <input class="registration__input feedback-input" type="tel" placeholder="Ваш номер телефона">
                             <button class="registration__btn feedback-btn" type="submit">Записаться</button>
                         </form>
                     </div>
@@ -485,35 +479,37 @@
             </section>
             <section class="questions">
                 <div class="container">
-                    <h2 class="questions__title">Часто задаваемые вопросы</h2>
-                    <div class="questions__button-group">
-                        <button class="questions__accordion">С какого возраста можно начать обучение?</button>
-                        <div class="questions__panel">
-                            <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
-                        </div>
-                        <button class="questions__accordion">Если в ходе изучения теории возник вопрос?</button>
-                        <div class="questions__panel">
-                            <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
-                        </div>
-                        <button class="questions__accordion">Можно ли приостановить обучение?</button>
-                        <div class="questions__panel">
-                            <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
-                        </div>
-                        <button class="questions__accordion">Какова эффективность онлайн курса?</button>
-                        <div class="questions__panel">
-                            <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
-                        </div>
-                        <button class="questions__accordion">Какие документы необходимы?</button>
-                        <div class="questions__panel">
-                            <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
-                        </div>
-                        <button class="questions__accordion">Можно ли сократить или увеличить срок обучения?</button>
-                        <div class="questions__panel">
-                            <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
-                        </div>
-                        <button class="questions__accordion">Когда начинается вождение?</button>
-                        <div class="questions__panel">
-                            <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                    <div class="questions__wrapper">
+                        <h2 class="questions__title">Часто задаваемые вопросы</h2>
+                        <div class="questions__button-group">
+                            <button class="questions__accordion">С какого возраста можно начать обучение?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Если в ходе изучения теории возник вопрос?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Можно ли приостановить обучение?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Какова эффективность онлайн курса?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Какие документы необходимы?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Можно ли сократить или увеличить срок обучения?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Когда начинается вождение?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
