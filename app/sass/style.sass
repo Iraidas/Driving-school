@@ -253,19 +253,11 @@ body
         display: flex
         align-items: center
         justify-content: center
-    &__container
-        padding: 72px 80px 62px 
     &__title    
-        @extend %title-font
-        margin-top: 15px
         max-width: 415px
-        font-size: 35px
         color: #2D2D2D
     &__caption  
-        display: flex
-    &__text 
-        display: flex
-        flex-direction: column
+        margin-bottom: 50px
     &__discount 
         @extend %title-font
         background: #FF9522
@@ -281,14 +273,7 @@ body
         padding-left: 70px
         margin-top: -150px
         margin-right: -70px
-    &__form 
-        display: flex
-        justify-content: space-between
-        gap: 0 30px
-    &__input    
-        flex-shrink: 1
-        flex-basis: 332px
-        border: 0
+    &__input
         border-bottom: 1px solid #EFEFEF
         &::placeholder
             font-size: 16px
@@ -296,7 +281,6 @@ body
     &__btn
         @extend %button-request
         background: #4F8FFD
-        border: 0
 
 .start
     padding-top: 130px
@@ -414,15 +398,15 @@ body
         color: #181818
     &__card-group
         display: flex
+        gap: 0 40px
     &__card 
-        padding: 40px
+        padding: 40px 57px 40px 40px
         font-size: 12px
         color: #212121
-        margin: 0 40px 0 0
     &__card-wrapper
         display: flex
         flex-direction: column
-        max-width: 170px
+        max-width: 190px
         font-size: 16px
     &__service-name
         @extend %title-font
@@ -447,6 +431,7 @@ body
         @extend %button-request
         background: #ff941f
         padding: 20px 40px
+        text-align: center
     &__new  
         @extend %title-font
         font-size: 40px
@@ -479,28 +464,207 @@ body
         .price__text-promo   
             background: #ff941f
 
+.trainers
+    padding-top: 150px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        flex-direction: row
+        align-items: center
+    &__title
+        @extend %title-font
+        font-size: 35px
+    &__caption
+        max-width: 370px
+    &__select   
+        border: 0
+        background: #f9f9f9
+        margin: 10px 0 45px
+    &__text
+        line-height: 24px
+        color: #181818
+        margin-bottom: 60px
+    &__button-group
+        display: flex
+        flex-direction: row
+    &__link
+        @extend %button-request
+        padding: 14px 30px
+        border-radius: 15px
+        color: #fff
+        background: #4F8FFD
+        border: 0
+        margin-right: 14px
+    &__slider-btn
+        position: inherit
+        min-width: 51px
+        min-height: 51px
+        border: 1px solid rgba(46, 42, 68, 0.12)
+        border-radius: 16px
+        background:#f9f9f9
+        margin-right: 5px !important
+        padding: 14px !important
+        left: 0
+        right: 0
+    &__slide
+        display: flex
+        justify-content: flex-end
+        margin-top: 70px
+        width: 100%
+        gap: 0 40px
+    &__card
+        padding: 30px 0 30px
+    &__img
+        display: flex
+        padding: 0 30px 0
+        border-bottom: 1px solid #EFEFEF
+    &__name
+        @extend %title-font
+        padding: 21px 30px 10px
+        max-width: 185px
+    &__experience
+        line-height: 19px
+        max-width: 158px
+        padding: 0 30px 55px
+        color: rgba(140, 140, 140, 0.56) 
+    &__rating
+        display: flex
+        align-items: flex-end
+        gap: 0 70px
+        line-height: 18px
+        max-width: 140px
+        padding: 0 30px
+        color: #181818
+    &__rating-num
+        position: relative
+        &::before
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            width: 20px
+            height: 20px
+            border-radius: 50%
+            content: url('/images/star_marker.svg')
+            font-size: 12px
+            color: #fff
+            right: 30px
+
+.reviews
+    margin-top: 170px
+    &__title
+        @extend %title-font
+        font-size: 35px
+        width: 50%
+
+.registration
+    margin-top: 164px
+    &__container
+        overflow: hidden
+        position: relative
+        padding: 47px 80px 0px !important  
+    &__title
+        color: #fff !important
+        margin-top: 5px !important
+    &__img
+        position: relative
+        z-index: 10
+        margin-top: -72px
+        margin-left: -332px
+        min-width: 100%
+    &__form
+        position: absolute !important
+        z-index: 10 !important
+        left: 80px !important
+        right: 80px !important
+        bottom: 60px !important
+    &__btn
+        color: #4f8ffd
+        background: #fff !important
+    &__input
+        color:#fff !important
+        &::placeholder
+            color: #fff !important
+
+.questions
+    margin-top: 150px
+    &__wrapper
+        display: flex
+    &__title
+        @extend %title-font
+        font-size: 35px
+        width: 50%
+    &__button-group
+        width: 50%
+    &__accordion
+        @extend %title-font
+        color:#181818
+        background: rgba(0, 0, 0, 0)
+        cursor: pointer
+        padding: 10px 0
+        line-height: 148.19%
+        width: 100%
+        border: none
+        text-align: left
+        outline: none
+        transition: 0.4s
+        &::after
+            content: url('/images/marker_accordion.svg')
+            color: #777
+            font-weight: bold
+            float: right
+            margin-left: 5px
+    &__active
+        &::after
+            content: url('/images/marker_accordion_active.svg')
+    &__panel
+        margin-bottom: 20px
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.2s ease-out
+
+.map
+    margin-top: 100px
+    &__title
+        @extend %title-font
+        font-size: 35px
+        width: 50%
 
 
 
 
 
 
+
+.swiper 
+    max-width: 100%
+    height: 100%
+
+.trainers__button-group
+    .swiper-button-next,
+    .swiper-button-prev
+        position: inherit
+        margin: 0
+        &::after
+            content: ""
 
 .feedback-container
     padding: 72px 80px 62px 
 .bg-white
     background: #FFFFFF
     border-radius: 30px
+.bg-blue
+    background: #4f8ffd
+    border-radius: 30px
 .feedback-caption
     display: flex
-
 .feedback-text
     display: flex
     flex-direction: column
 .feedback-title
     @extend %title-font
     margin-top: 15px
-    max-width: 415px
+    min-width: 415px
     font-size: 35px
     color: #2D2D2D
 .feedback-form
@@ -511,6 +675,7 @@ body
     flex-shrink: 1
     flex-basis: 332px
     border: 0
+    background: rgba(0,0,0,0)
     border-bottom: 1px solid #EFEFEF
     &::placeholder
         font-size: 16px
@@ -519,16 +684,3 @@ body
     @extend %button-request
     background: #4F8FFD
     border: 0
-
-.swiper 
-    max-width: 900px
-    height: 300px
-
-.trainers__button-group
-    .swiper-button-next,
-    .swiper-button-prev
-        position: inherit
-        margin: 0
-        &::after
-            content: ""
-            padding: 0
