@@ -3,6 +3,9 @@
 @import reset
 @import global
 
+html
+    scroll-behavior: smooth
+
 body
     font-family: 'Roboto-Regular', sans-serif
     font-weight: 400
@@ -551,15 +554,100 @@ body
             right: 30px
 
 .reviews
-    margin-top: 170px
+    padding-top: 170px
+    &__wrapper  
+        display: flex
+        flex-direction: column
     &__title
         @extend %title-font
         font-size: 35px
         width: 50%
+    &__swiper
+        margin: 60px 0 70px
+    &__swiper-wrapper
+        display: flex
+        justify-content: center
+    &__slide
+        display: flex
+        flex-direction: column
+        align-items: center
+        // width: 400px !important
+    &__card
+        max-width: 250px
+        padding: 50px 30px
+    &__video-card
+        display: flex
+        flex-direction: column
+        overflow: hidden
+        justify-content: space-between
+        min-height: 500px
+    &__video-preview-text
+        @extend %title-font
+        align-self: center
+        max-width: 150px
+        text-align: center
+        line-height: 20px
+        letter-spacing: 0.01em
+        color: #fff
+    &__info 
+        @extend %title-font
+        display: flex
+        align-items: center
+    &__name
+        padding-left: 20px
+        max-width: 150px
+        color: #181818
+        line-height: 148.19%
+    &__text
+        padding: 60px 0
+        line-height: 24px
+        color: #181818
+    &__trainer
+        color: #B8B6C4
+        line-height: 20px
+        font-size: 14px
+        letter-spacing: 0.01em
+    &__button-group
+        display: flex
+        flex-direction: row
+    &__link
+        @extend %button-request
+        padding: 14px 30px
+        border-radius: 15px
+        color: #fff
+        background: #4F8FFD
+        border: 0
+        margin-right: 14px
+    &__slider-btn
+        position: inherit
+        min-width: 51px
+        min-height: 51px
+        border: 1px solid rgba(46, 42, 68, 0.12)
+        border-radius: 16px
+        background:#f9f9f9
+        margin-right: 5px !important
+        padding: 14px !important
+        left: 0
+        right: 0
+
+    
+    
+    
+    // &__video-preview-text
+    
+
+
+
+
+
+
+
+
+
 
 .registration
-    margin-top: 164px
-    &__container
+    padding-top: 165px
+    &__wrapper
         overflow: hidden
         position: relative
         padding: 47px 80px 0px !important  
@@ -590,6 +678,8 @@ body
     margin-top: 150px
     &__wrapper
         display: flex
+        flex-wrap: wrap
+        justify-content: center
     &__title
         @extend %title-font
         font-size: 35px
@@ -622,25 +712,119 @@ body
         max-height: 0
         overflow: hidden
         transition: max-height 0.2s ease-out
+    &__link
+        @extend %button-request
+        background: #ff941f
+        padding: 20px 40px
+        margin: 120px 0
+        text-align: center
+        align-self: center 
 
-.map
-    margin-top: 100px
-    &__title
+.footer
+    background: #1f1f1f
+    &__wrapper
+        display: flex
+        flex-direction: column
+    &__links
+        display: flex
+        justify-content: space-between
+        padding: 30px 0
+        border-bottom: 1px solid #292929
+    &__info
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin-right: 70px
+        color: #fff
+    &__logo
+        display: flex
+        align-items: center
+    &__logo-caption       
         @extend %title-font
-        font-size: 35px
-        width: 50%
-
-
-
-
-
-
+        padding-left: 20px
+        padding-bottom: 10px
+        font-size: 43px
+        text-align: center
+        color: #fff
+    &__logo-caption-text
+        line-height: 5px
+        letter-spacing: 1.4px
+        font-size: 20px
+    &__number
+        margin-top: 20px
+        font-size: 29px
+    &__location
+        font-size: 14px
+    &__schedules
+        font-size: 14px
+    &__list-social
+        display: flex
+    &__list-item-links
+        display: flex
+        flex-direction: column
+    &__list
+        margin: 15px 90px 0 0
+        color: #c4c4c4
+    &__list-item
+        margin: 12px 0
+        font-size: 14px
+        color: #c4c4c4
+    &__list-link
+        color: #c4c4c4
+    &__copyright
+        display: grid
+        grid-template-columns: 1fr 2fr
+        padding: 20px 0 30px
+        font-size: 13px
+        color: #404040 
+    &__list-social-item
+        margin: 0 5px 5px
+    &__list-social-link
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #fff
+        border-radius: 50%
+        width: 35px
+        height: 35px
+    &__list-social-link-img
+        width: 20px
+        height: 20px
+    &__copyright-column-2
+        text-align: end
+    &__list-item-link
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #111111
+        align-self: baseline
+        border-radius: 5px
+        min-height: 40px
+        min-width: 130px
+        margin: 5px 0
+    &__yandex
+        display: flex
+        align-items: flex-end
+        overflow: hidden
+        background: #fff
+        align-self: baseline
+        border-radius: 5px
+        min-height: 40px
+        min-width: 130px
+        margin: 5px 0
+    &__yandex-text
+        width: 100%
+        line-height: 12px
+        text-align: center
+        background: #ebf1f4
+        color: #9aabb8
+        font-size: 6.5px
 
 .swiper 
     max-width: 100%
     height: 100%
 
-.trainers__button-group
+.button-group
     .swiper-button-next,
     .swiper-button-prev
         position: inherit
@@ -650,27 +834,34 @@ body
 
 .feedback-container
     padding: 72px 80px 62px 
+
 .bg-white
     background: #FFFFFF
     border-radius: 30px
+
 .bg-blue
     background: #4f8ffd
     border-radius: 30px
+
 .feedback-caption
     display: flex
+
 .feedback-text
     display: flex
     flex-direction: column
+
 .feedback-title
     @extend %title-font
     margin-top: 15px
     min-width: 415px
     font-size: 35px
     color: #2D2D2D
+
 .feedback-form
     display: flex
     justify-content: space-between
     gap: 0 30px
+
 .feedback-input
     flex-shrink: 1
     flex-basis: 332px
@@ -680,6 +871,7 @@ body
     &::placeholder
         font-size: 16px
         color: #181818
+
 .feedback-btn
     @extend %button-request
     background: #4F8FFD
