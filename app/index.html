@@ -379,7 +379,7 @@
                             </select>
                             <p class="trainers__text">Эффективность обучения во многом зависит от инструктора, поэтому для нашей автошколы «Реал» мы отобрали квалифицированных водите-лей, имеющих не только большой стаж вождения, но и опыт в преподавании. Они доступно излагают материал, всегда готовы прийти на помощь, а также легко находят общий язык с аудиторией.</p>
                             <p class="trainers__text">Для того чтобы вам проще было выбрать инструктора для себя, на нашем сайте реализована рейтинговая система. Вы сможете ознакомиться с портфолио конкретного специалиста, его оценкой и отзывами от предыдущих учеников.</p>
-                            <div class="trainers__button-group">
+                            <div class="trainers__button-group button-group">
                                 <a class="trainers__link" href="#">Все инструкторы</a>
                                 <button class="trainers__slider-btn swiper-button-prev" type="button">
                                     <img class="trainers__btn-img" src="images/arrow-left.svg" alt="стрелка влево">
@@ -390,7 +390,7 @@
                             </div>
                         </div>
                         <div class="trainers__swiper swiper">
-                            <div class="trainers__wrapper swiper-wrapper">
+                            <div class="trainers__swiper-wrapper swiper-wrapper">
                                 <div class="trainers__slide swiper-slide">
                                     <div class="trainers__card bg-white">
                                         <div class="trainers__img">
@@ -446,21 +446,62 @@
             </section>
             <section class="reviews">
                 <div class="container">
-                    <h2 class="reviews__title">Отзывы наших выпускников</h2>
-                    <div class="reviews__button-group">
-                        <a class="reviews__link" href="#">Все отзывы</a>
-                        <button class="reviews__slider-btn" type="button">
-                            <img class="reviews__btn-img" src="images/arrow-left.svg" alt="стрелка влево">
-                        </button>
-                        <button class="reviews__slider-btn" type="button">
-                            <img class="reviews__btn-img" src="images/arrow-right.svg" alt="стрелка направо">
-                        </button>
+                    <div class="reviews__wrapper">
+                        <h2 class="reviews__title">Отзывы наших выпускников</h2>
+                        <div class="reviews__swiper swiper">
+                            <div class="reviews__swiper-wrapper swiper-wrapper">
+                                <div class="reviews__slide swiper-slide">
+                                    <div class="reviews__card bg-white">
+                                        <div class="reviews__info">
+                                            <img src="images/reviewer-1.png" alt="">
+                                            <p class="reviews__name">Слепова Александра</p>
+                                        </div>
+                                        <p class="reviews__text">Хочу сказать спасибо автошколе Реал за такую возможность и готовность идти навстречу. Отдельно спасибо хотела бы сказать Маслову Валерию Михайловичу за знания, понятное объяснение и желание помочь ученику в трудностях, а также за профессионализм и подход к каждому</p>
+                                        <p class="reviews__trainer">
+                                            Инструктор: Семенов Сергей Викторович
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reviews__slide reviews__video-slide swiper-slide">
+                                    <div class="reviews__card reviews__video-card">
+                                        <div class="reviews__info">
+                                            <img src="images/reviewer-2.png" alt="">
+                                            <p class="reviews__name">Кудрявцева Татьяна</p>
+                                        </div>
+                                        <p class="reviews__video-preview-text">
+                                            Смотреть видеоотзыв
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reviews__slide swiper-slide">
+                                    <div class="reviews__card bg-white">
+                                        <div class="reviews__info">
+                                            <img src="images/reviewer-1.png" alt="">
+                                            <p class="reviews__name">Слепова Александра</p>
+                                        </div>
+                                        <p class="reviews__text">Хочу сказать спасибо автошколе Реал за такую возможность и готовность идти навстречу. Отдельно спасибо хотела бы сказать Маслову Валерию Михайловичу за знания, понятное объяснение и желание помочь ученику в трудностях, а также за профессионализм и подход к каждому</p>
+                                        <p class="reviews__trainer">
+                                            Инструктор: Семенов Сергей Викторович
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__button-group button-group">
+                            <a class="reviews__link" href="#">Все отзывы</a>
+                            <button class="trainers__slider-btn swiper-button-prev" type="button">
+                                <img class="trainers__btn-img" src="images/arrow-left.svg" alt="стрелка влево">
+                            </button>
+                            <button class="trainers__slider-btn swiper-button-next" type="button">
+                                <img class="trainers__btn-img" src="images/arrow-right.svg" alt="стрелка направо">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="registration">
+            <section class="registration" id="registration">
                 <div class="container">
-                    <div class="registration__container feedback-container bg-blue">
+                    <div class="registration__wrapper feedback-container bg-blue">
                         <div class="registration__caption feedback-caption">
                             <div class="registration__text feedback-text">
                                 <h2 class="registration__title feedback-title">Запишись на обучение прямо сейчас!</h2>
@@ -511,120 +552,104 @@
                                 <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
                             </div>
                         </div>
+                        <a class="questions__link request" href="#registration">Записаться на обучение</a>
                     </div>
-                </div>
-            </section>
-            <section class="map">
-                <div class="container">
-                    <h2 class="map__title">География присутствия</h2>
-                    <div class="map__selector-container bg-white">
-                        <select class="map__select region-select" name="region" id="region-select-2">
-                            <option class="map__option" selected value="Орехово-Зуево">Орехово-Зуево</option>
-                            <option class="map__option" value="Москва">Москва</option>
-                            <option class="map__option" value="Химки">Химки</option>
-                            <option class="map__option" value="Сергиев Посад">Сергиев Посад</option>
-                            <option class="map__option" value="Одинцово">Одинцово</option>
-                        </select>
-                        <ul class="map__list">
-                            <li class="map__list-item">Ленина 75</li>
-                            <li class="map__list-item">Вокзальная 4</li>
-                            <li class="map__list-item">Бирюкова 4а</li>
-                        </ul>
-                        <div class="map__logo">
-                            <img src="images/Real_logo_text.svg" alt="">
-                        </div>
-                    </div>
-                    <a class="map__link request" href="#">Записаться на обучение</a>
                 </div>
             </section>
         </main>
     </div>
         <footer class="footer">
             <div class="container">
-                <div class="footer__links">
-                    <div class="footer__info">
-                        <div class="footer__logo">
-                            <img class="footer__logo-img" height="75" src="images/Real_logo.svg" alt="логотип автошколы Реал">
-                            <div class="footer__logo-caption">
-                                <p>РЕАЛ</p>
-                                <p>автошкола</p>
+                <div class="footer__wrapper">
+                    <div class="footer__links">
+                        <div class="footer__info">
+                            <div class="footer__logo">
+                                <img class="footer__logo-img" fill="#fff" height="75" src="images/Real_logo_white.svg" alt="логотип автошколы Реал">
+                                <div class="footer__logo-caption">
+                                    <p>РЕАЛ</p>
+                                    <p class="footer__logo-caption-text">автошкола</p>
+                                </div>
                             </div>
+                            <p class="footer__number">+ 7 499 877 51 80</p>
+                            <p class="footer__location">115088, г. Москва, ул. Южнопортовая, д. 5, стр. 7</p>
+                            <p class="footer__schedules">пн-пт: 09:00 - 19:00, сб-вс: 10:00 - 18:00</p>
                         </div>
-                        <p class="footer__number">+ 7 499 877 51 80</p>
-                        <p class="footer__location">115088, г. Москва, ул. Южнопортовая, д. 5, стр. 7</p>
-                        <p class="footer__schedules">пн-пт: 09:00 - 19:00, сб-вс: 10:00 - 18:00</p>
-                    </div>
-                    <ul class="footer__list">
-                        <li class="footer__list-item">Категория B (МКП)</li>
-                        <li class="footer__list-item">Категория B (АКП)</li>
-                        <li class="footer__list-item">Категория A,A1</li>
-                        <li class="footer__list-item">Категория AI</li>
-                        <li class="footer__list-item">Категория M</li>
-                    </ul>
-                    <ul class="footer__list">
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Акции</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">О нас</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Галерея</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Контакты</a>
-                        </li>
-                    </ul>
-                    <ul class="footer__list">
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Расписание</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Площадка</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Блог</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Филиалы</a>
-                        </li>
-                    </ul>
-                    <div class="footer__social-link">
-                        <ul class="footer__list-social">
-                            <li class="footer__list-social-item">
-                                <a class="footer__list-social-link" href="#">
-                                    <img src="images/icon_vk.svg" alt="">
-                                </a>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">Категория B (МКП)</li>
+                            <li class="footer__list-item">Категория B (АКП)</li>
+                            <li class="footer__list-item">Категория A,A1</li>
+                            <li class="footer__list-item">Категория AI</li>
+                            <li class="footer__list-item">Категория M</li>
+                        </ul>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Акции</a>
                             </li>
-                            <li class="footer__list-social-item">
-                                <a class="footer__list-social-link" href="#">
-                                    <img src="images/icon_instagram.svg" alt="">
-                                </a>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">О нас</a>
                             </li>
-                            <li class="footer__list-social-item">
-                                <a class="footer__list-social-link" href="#">
-                                    <img src="images/icon_youtube.svg" alt="">
-                                </a>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Галерея</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Контакты</a>
                             </li>
                         </ul>
-                        <div class="footer__list-item-links">
-                            <a class="footer__list-item-link" href="#">
-                                <img src="images/app-store.svg" alt="">
-                            </a>
-                            <a class="footer__list-item-link" href="#">
-                                <img src="images/google-play.svg" alt="">
-                            </a>
-                            <a class="footer__list-item-link" href="#">
-                                Рейтинг организации в Яндексе
-                            </a>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Расписание</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Площадка</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Блог</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Филиалы</a>
+                            </li>
+                        </ul>
+                        <div class="footer__social">
+                            <ul class="footer__list-social">
+                                <li class="footer__list-social-item">
+                                    <a class="footer__list-social-link" href="#">
+                                        <img class="footer__list-social-link-img" src="images/logo_vk.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="footer__list-social-item">
+                                    <a class="footer__list-social-link" href="#">
+                                        <img class="footer__list-social-link-img" src="images/logo_instagram.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="footer__list-social-item">
+                                    <a class="footer__list-social-link" href="#">
+                                        <img class="footer__list-social-link-img" src="images/logo_youtube.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="footer__list-item-links">
+                                <a class="footer__list-item-link" href="#">
+                                    <img src="images/app-store.svg" alt="">
+                                </a>
+                                <a class="footer__list-item-link" href="#">
+                                    <img src="images/google-play.svg" alt="">
+                                </a>
+                                <a class="footer__yandex" href="#">
+                                    <span class="footer__yandex-text">Рейтинг организации в Яндексе</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="footer__copyfight">
-                    <p>ИНН 50350445337</p>
-                    <p>КПП 503401001 / ОГРН 1135034000287</p>
-                    <p>@ 2013 - 2022 Автошкола "Реал"</p>
-                    <p>Все права защищены. Копирование материалов разрешено только с согласия правообладателя.</p>
+                    <div class="footer__copyright">
+                        <div class="footer__copyright-column-1">
+                            <p>ИНН 50350445337</p>
+                            <p>КПП 503401001 / ОГРН 1135034000287</p>
+                        </div>
+                        <div class="footer__copyright-column-2">
+                            <p>@ 2013 - 2022 Автошкола "Реал"</p>
+                            <p>Все права защищены. Копирование материалов разрешено только с согласия правообладателя.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
