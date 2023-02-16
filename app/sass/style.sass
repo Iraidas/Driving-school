@@ -10,11 +10,15 @@ body
     font-family: 'Roboto-Regular', sans-serif
     font-weight: 400
 
-.visually-hidden
+.visually-hidden,
+.toggle,
+.checkbox
     display: none
 
 .header
     background: #f9f9f9
+    &__logo-mobile
+        display: none
 
 .links
     background: #ffa34b
@@ -119,9 +123,10 @@ body
 
 .main
     background: #f9f9f9
+    overflow: hidden
 
 .preview
-    padding: 70px 0 100px
+    padding-top: 70px
     &__wrapper
         display: flex
         align-items: flex-start
@@ -132,12 +137,14 @@ body
         margin: 88px 0 20px
         color: #222222
     &__text-container
+        max-height: 100vh
         display: flex
         flex-direction: column
+        flex-wrap: wrap
         text-align: start
         line-height: 19px
     &__position
-        order: -1
+        order: -2
     &__position-point
         color: #C4C4C4
     &__text
@@ -149,6 +156,10 @@ body
         @extend %button-request
         align-self: flex-start
         background: #ff941f
+    &__img
+        min-width: 480px
+    &__img-mobile
+        display: none
 
 .users
     overflow: hidden
@@ -497,6 +508,7 @@ body
         color: #fff
         background: #4F8FFD
         border: 0
+        max-width: 220px
         margin-right: 14px
     &__slider-btn
         position: inherit
@@ -762,7 +774,7 @@ body
 .feedback-title
     @extend %title-font
     margin-top: 15px
-    min-width: 415px
+    max-width: 415px
     font-size: 35px
     color: #2D2D2D
 
@@ -785,3 +797,329 @@ body
     @extend %button-request
     background: #4F8FFD
     border: 0
+
+@media screen and (max-width: 768px)
+    
+    .links,
+    .checkbox,
+    .info
+        display: none
+    
+    .header
+        background: #fff
+        margin-top: 20px
+        &__wrapper
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            align-items: center
+            min-height: 60px
+        &__logo-mobile
+            display: flex
+            position: absolute
+            align-self: flex-start
+            align-items: center
+            justify-content: center
+            z-index: 0
+            margin-right: 80px
+            width: 100%
+    
+    .toggle
+        display: flex
+        position: relative
+        padding-top: 10px 
+        z-index: 10
+        flex-direction: column
+        margin-left: 30px
+        min-height: 59px
+        width: 20px
+        cursor: pointer
+        &__line
+            border-radius: 10px
+            height: 2px
+            background: #000
+            margin: 2px 0
+            transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6)
+        &__line1
+            width: 100%
+        &__line2
+            width: 100%
+        &__line3
+            width: 75%
+    
+    input[type="checkbox"]
+        &:checked
+            & ~ .toggle
+                .toggle__line1
+                    transform-origin: bottom
+                    transform: rotatez(45deg) translate(4px,4px)
+
+    input[type="checkbox"]
+        &:checked 
+            & ~ .toggle
+                .toggle__line2
+                    transform-origin: top
+                    transform: rotatez(-45deg)
+
+    input[type="checkbox"]
+        &:checked 
+            & ~ .toggle
+                .toggle__line3
+                    transform-origin: bottom
+                    width:50%
+                    transform: translate(8px,-3px) rotatez(45deg)
+
+    input[type="checkbox"]
+        &:checked
+            & ~ .nav
+                height: 400px
+    .nav
+        display: flex
+        justify-content: center
+        width: 100%
+        height: 0
+        transition: .6s ease
+        &__list
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__list-item
+            margin: 15px 0
+        &__list-link
+            @extend %title-font
+            color: #000
+            font-size: 14px
+
+    .preview
+        padding: 37px 0 0
+        &__text-container
+            max-height: 100%
+            flex-wrap: nowrap
+        &__title
+            order: -1
+            font-size: 2.2em
+            padding: 0 30px
+            margin: 50px 0 20px
+        &__position
+            @include title-font()
+            padding: 0 30px
+        &__text
+            padding: 0 30px
+        &__img-mobile
+            display: flex
+            order: -1
+            overflow: hidden
+            margin-top: -42px
+            margin-right: -20px
+            img
+                margin-top: -5px
+        &__img
+            display: none
+        &__link
+            align-self: auto
+            text-align: center
+            margin: 0 30px
+
+    .users
+        padding: 100px 30px 0
+        &__title
+            font-size: 1.8em
+        &__list
+            flex-wrap: wrap
+            font-size: 14px
+            line-height: 16px
+            justify-content: flex-start
+        &__list-item
+            flex-basis: 130px
+
+    .advantages
+        padding: 100px 30px 0
+        &__title
+            margin-top: 0
+            font-size: 1.8em
+
+    .promotion
+        padding: 100px 30px 0
+        // &__title
+        // &__wrapper
+        // &__caption
+        // &__discount
+        // &__img
+        // &__input
+        // &__btn
+
+    .start
+        padding: 100px 30px 0
+        &__title
+            font-size: 1.8em
+        &__text
+            padding-top: 20px
+        &__list
+            flex-direction: column
+        &__list-item
+            padding-top: 60px
+            text-align: center
+            &:nth-of-type(1),
+            &:nth-of-type(2)
+                &::after
+                    content: url('/images/arrow-to-down.svg')
+                    padding-top: 60px
+        &__list-item-img
+            align-self: center
+        &__list-2
+            flex-direction: row
+            padding-top: 70px !important
+            max-height: 100%
+
+    .stages
+        padding: 100px 30px 0
+        &__list
+            flex-direction: column
+            margin-top: 60px
+        &__list-item
+            flex-basis: 100px
+            padding: 28px 0 0 50px
+            &::before
+                left: 6px
+                top: 27px
+            &::after
+                border-top: 0
+                border-left: 0.5px dashed #d8d8d8
+                width: 1px
+                bottom: -22px
+                left: 16px
+                top: 52px
+                height: auto
+
+    .price
+        padding: 100px 30px 0
+        &__wrapper
+            flex-direction: column
+        &__caption
+            display: flex
+            flex-direction: column
+        &__title
+            font-size: 1.8em
+        &__text
+            padding: 16px 0 50px
+        &__select
+            order: 2
+            align-self: center
+        // &__card-group
+        // &__card
+        // &__card-wrapper
+        // &__service-name
+        // &__question
+        // &__old-line
+        // &__old
+        // &__link
+        // &__new
+        // &__text-promo
+        // &__initial-fee
+        // &__list
+        // &__list-item
+
+    .trainers
+        padding: 100px 30px 0
+        &__wrapper
+            flex-direction: column
+        &__title
+            font-size: 1.8em
+            order: -2
+            padding-bottom: 20px 
+        &__caption
+            display: flex
+            flex-direction: column
+            max-width: auto
+        &__select
+            order: 3
+            align-self: center
+            margin-top: 30px
+        &__text
+            margin-bottom: 30px
+        &__slide
+            margin: 0
+        &__button-group
+            margin-top: 50px
+            justify-content: center
+        &__link
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0 20px
+            text-align: center
+            font-size: 0.9em
+        // &__slider-btn
+        // &__card
+        // &__img
+        // &__name
+        // &__experience
+        // &__rating
+        // &__rating-num
+        //     &::before
+
+    .questions
+        padding: 100px 30px 0
+        &__wrapper
+            flex-direction: column
+        &__title
+            font-size: 1.8em
+            width: 100%
+        &__button-group
+            margin-top: 60px
+            width: 100%
+        &__accordion
+            font-size: 0.9em
+            &::after
+                float: none
+                margin-left: 10px
+        &__link
+            margin: 20px 0 80px
+        // &__active
+        //     &::after
+        // &__panel
+    
+    .footer
+        padding: 0 30px
+        &__list
+            display: none
+        &__links
+            flex-direction: column
+        &__info
+            margin: 0 0 90px
+        &__logo-img
+            max-height: 55px
+        &__logo-caption
+            padding-left: 15px
+            font-size: 2.2em
+        &__logo-caption-text
+            font-size: 0.45em
+        &__number
+            font-size: 1.3em
+            margin-top: 25px
+        &__social
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+        &__copyright
+            grid-template-columns: 1fr
+        &__copyright-column-1
+            text-align: center
+        &__copyright-column-2
+            order: -1
+            text-align: center
+            padding-bottom: 20px
+        // &__location
+        // &__schedules
+        // &__list-social
+        // &__list-item-links
+        // &__list-item
+        // &__list-link
+        // &__list-social-item
+        // &__list-social-link
+        // &__list-social-link-img
+        // &__list-item-link
+        // &__yandex
+        // &__yandex-text
+
