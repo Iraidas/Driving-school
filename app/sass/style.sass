@@ -153,8 +153,9 @@ body
         text-align: start
         margin-bottom: 56px
     &__link
-        @extend %button-request
         align-self: flex-start
+    &__link-request
+        @extend %button-request
         background: #ff941f
     &__img
         min-width: 480px
@@ -465,6 +466,8 @@ body
         border-top: 1px solid #E4E4E4
         color: rgba(140, 140, 140, 0.56) 
         padding: 15px 0 30px
+    &__accordion
+        display: none
     &__list 
         list-style: disc !important
         padding-left: 20px !important
@@ -574,11 +577,13 @@ body
     &__title
         color: #fff !important
         margin-top: 5px !important
+        margin-bottom: 170px
     &__img
-        position: relative
-        z-index: 10
+        position: absolute
+        z-index: 1
+        right: 0
+        right: -85px
         margin-top: -72px
-        margin-left: -332px
         min-width: 100%
     &__form
         position: absolute !important
@@ -766,10 +771,12 @@ body
 
 .feedback-caption
     display: flex
+    position: relative
 
 .feedback-text
     display: flex
     flex-direction: column
+    z-index: 10
 
 .feedback-title
     @extend %title-font
@@ -786,6 +793,7 @@ body
 .feedback-input
     flex-shrink: 1
     flex-basis: 332px
+    max-width: 332px
     border: 0
     background: rgba(0,0,0,0)
     border-bottom: 1px solid #EFEFEF
@@ -795,10 +803,12 @@ body
 
 .feedback-btn
     @extend %button-request
+    max-width: 220px
+    width: 100%
     background: #4F8FFD
     border: 0
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 503px)
     
     .links,
     .checkbox,
@@ -807,13 +817,13 @@ body
     
     .header
         background: #fff
-        margin-top: 20px
+        margin-top: 10px
         &__wrapper
             display: flex
             flex-wrap: wrap
             justify-content: space-between
             align-items: center
-            min-height: 60px
+            min-height: 40px
         &__logo-mobile
             display: flex
             position: absolute
@@ -831,17 +841,18 @@ body
         z-index: 10
         flex-direction: column
         margin-left: 30px
-        min-height: 59px
-        width: 20px
+        min-height: 49px
+        width: 13px
         cursor: pointer
         &__line
             border-radius: 10px
-            height: 2px
+            height: 1.5px
             background: #000
             margin: 2px 0
             transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6)
         &__line1
             width: 100%
+            height: 1.5px
         &__line2
             width: 100%
         &__line3
@@ -852,7 +863,7 @@ body
             & ~ .toggle
                 .toggle__line1
                     transform-origin: bottom
-                    transform: rotatez(45deg) translate(4px,4px)
+                    transform: rotatez(45deg) translate(3.5px,3px)
 
     input[type="checkbox"]
         &:checked 
@@ -867,7 +878,7 @@ body
                 .toggle__line3
                     transform-origin: bottom
                     width:50%
-                    transform: translate(8px,-3px) rotatez(45deg)
+                    transform: translate(6px,-3.5px) rotatez(45deg)
 
     input[type="checkbox"]
         &:checked
@@ -891,44 +902,54 @@ body
             font-size: 14px
 
     .preview
-        padding: 37px 0 0
+        padding: 37px 30px 0
         &__text-container
             max-height: 100%
             flex-wrap: nowrap
         &__title
             order: -1
-            font-size: 2.2em
-            padding: 0 30px
-            margin: 50px 0 20px
+            font-size: 9vw
+            line-height: 9vw
+            max-width: 300px
+            margin: 40px 0 20px
         &__position
             @include title-font()
-            padding: 0 30px
         &__text
-            padding: 0 30px
+            margin-bottom: 50px
         &__img-mobile
             display: flex
+            justify-content: center
             order: -1
             overflow: hidden
             margin-top: -42px
-            margin-right: -20px
+            margin-right: -40px
             img
                 margin-top: -5px
         &__img
             display: none
         &__link
-            align-self: auto
+            display: flex
+            align-items: center
+            justify-content: center
+            align-self: center
+            max-width: 330px
+            width: 100%
+        &__link-request
             text-align: center
-            margin: 0 30px
+            width: 100%
+            max-width: 330px
+            min-width: 200px
 
     .users
         padding: 100px 30px 0
         &__title
-            font-size: 1.8em
+            font-size: 8vw
         &__list
+            display: flex
+            justify-content: space-evenly
             flex-wrap: wrap
             font-size: 14px
             line-height: 16px
-            justify-content: flex-start
         &__list-item
             flex-basis: 130px
 
@@ -936,29 +957,46 @@ body
         padding: 100px 30px 0
         &__title
             margin-top: 0
-            font-size: 1.8em
+            font-size: 8vw
+        &__list-item
+            &::before
+                top: 0
 
     .promotion
-        padding: 100px 30px 0
-        // &__title
-        // &__wrapper
-        // &__caption
-        // &__discount
-        // &__img
-        // &__input
-        // &__btn
+        padding: 200px 30px 0
+        display: block
+        &__wrapper
+            display: block
+        &__caption
+            padding-top: 20px !important
+            margin-bottom: 0
+        &__discount
+            font-size: .9em
+        &__img
+            position: absolute
+            z-index: 10
+            bottom: 160px
+            margin-top: 0
+            padding-left: 0
+            margin-right: -139px
+        &__input
+            border-bottom: 1px solid #EFEFEF !important
+            &::placeholder
+                font-size: 0.84rem
 
     .start
         padding: 100px 30px 0
         &__title
-            font-size: 1.8em
+            font-size: 8vw
         &__text
             padding-top: 20px
         &__list
             flex-direction: column
+            align-items: center
         &__list-item
             padding-top: 60px
             text-align: center
+            max-width: 240px
             &:nth-of-type(1),
             &:nth-of-type(2)
                 &::after
@@ -973,6 +1011,8 @@ body
 
     .stages
         padding: 100px 30px 0
+        &__title
+            font-size: 8vw
         &__list
             flex-direction: column
             margin-top: 60px
@@ -998,33 +1038,73 @@ body
         &__caption
             display: flex
             flex-direction: column
+        &__initial-fee
+            padding-bottom: 10px
+            border-top: 0
+            border-bottom: 1px solid #E4E4E4
+        &__accordion
+            display: block
+            color:#181818
+            background: rgba(0, 0, 0, 0)
+            cursor: pointer
+            font-size: 12px
+            padding: 10px 0
+            line-height: 148.19%
+            width: 100%
+            border: none
+            text-align: left
+            outline: none
+            transition: 0.4s
+            &::after
+                content: url('/images/down-arrow.svg')
+                color: #777
+                margin-left: 8px
+        &__active
+            &::after
+                content: url('/images/up-arrow.svg')
+                max-height: 10px
+        &__list
+            margin-bottom: 20px
+            max-height: 0
+            overflow: hidden
+            transition: max-height 0.4s ease-out
         &__title
-            font-size: 1.8em
+            font-size: 8vw
         &__text
             padding: 16px 0 50px
         &__select
             order: 2
             align-self: center
-        // &__card-group
-        // &__card
-        // &__card-wrapper
-        // &__service-name
-        // &__question
-        // &__old-line
-        // &__old
-        // &__link
-        // &__new
-        // &__text-promo
-        // &__initial-fee
-        // &__list
-        // &__list-item
+        &__card-wrapper
+            max-width: 100%
+        &__card-group
+            display: flex
+            flex-direction: column
+            gap: 30px 0
+        &__card
+            display: block
+            padding: 40px
+        &__old-line
+            max-width: 350px
+        &__old
+            font-size: 5vw
+            line-height: 8vw
+        &__new
+            font-size: 9vw
+            line-height: 14vw
+        &__link
+            padding: 20px 0px
+            text-align: center
+            align-self: center
+            width: 100%
+            max-width: 220px
 
     .trainers
         padding: 100px 30px 0
         &__wrapper
             flex-direction: column
         &__title
-            font-size: 1.8em
+            font-size: 8vw
             order: -2
             padding-bottom: 20px 
         &__caption
@@ -1058,12 +1138,30 @@ body
         // &__rating-num
         //     &::before
 
-    .questions
+    .registration
         padding: 100px 30px 0
+        &__title
+            margin-bottom: 0
+        &__form
+            position: initial !important
+        &__img
+            position: absolute
+            z-index: 1
+            top: -10px
+            left: -350px
+            img
+                max-width: 110%
+        &__input
+            &::placeholder
+                font-size: 0.84rem
+
+    .questions
+        padding: 100px 40px 0 30px
+        margin: 0
         &__wrapper
             flex-direction: column
         &__title
-            font-size: 1.8em
+            font-size: 8vw
             width: 100%
         &__button-group
             margin-top: 60px
@@ -1075,9 +1173,6 @@ body
                 margin-left: 10px
         &__link
             margin: 20px 0 80px
-        // &__active
-        //     &::after
-        // &__panel
     
     .footer
         padding: 0 30px
@@ -1110,16 +1205,26 @@ body
             order: -1
             text-align: center
             padding-bottom: 20px
-        // &__location
-        // &__schedules
-        // &__list-social
-        // &__list-item-links
-        // &__list-item
-        // &__list-link
-        // &__list-social-item
-        // &__list-social-link
-        // &__list-social-link-img
-        // &__list-item-link
-        // &__yandex
-        // &__yandex-text
 
+    .feedback-container
+        padding: 80px 40px 50px !important
+    .feedback-title
+        font-size: 6.8vw
+    .feedback-form
+        display: flex
+        flex-direction: column
+    .feedback-input
+        flex-basis: 50px
+        margin-top: 50px
+        border: 0
+        font-size: 0.9em !important
+        background: rgba(0,0,0,0)
+        border-bottom: 1px solid rgba(239, 239, 239, 0.22)
+    .feedback-btn
+        padding: 20px 0px
+        margin-top: 40px
+        text-align: center
+        align-self: center
+    .feedback-caption
+        position: relative
+        flex-direction: column-reverse
