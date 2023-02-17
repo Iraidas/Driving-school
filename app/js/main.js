@@ -37,3 +37,18 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
+
+
+let accor = document.querySelectorAll(".price__accordion");
+
+for (let i = 0; i < accor.length; i++) {
+  accor[i].addEventListener("click", function() {
+    this.classList.toggle("price__active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
