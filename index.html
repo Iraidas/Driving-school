@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автошкола Реал</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="links">
+                <div class="container">
+                    <div class="links__wrapper">
+                        <ul class="links__list">
+                            <li class="links__list-item">
+                                <a href="#" class="links__list-link">Блог</a>
+                            </li>
+                            <li class="links__list-item">
+                                <a href="#" class="links__list-link">Документы</a>
+                            </li>
+                            <li class="links__list-item">
+                                <a href="#" class="links__list-link">FAQ</a>
+                            </li>
+                        </ul>
+                        <ul class="links__social">
+                            <li class="links__social-item">                      
+                                <a href="#" class="links__social-link">
+                                    <img class="links__social-link-icon" width="20" src="images/icon_vk.svg" alt="логотип Вконтакте">
+                                </a>
+                            </li>
+                            <li class="links__social-item">
+                                <a href="#" class="links__social-link">
+                                    <img class="links__social-link-icon" width="17" src="images/icon_instagram.svg" alt="логотип Инстаграм">
+                                </a>
+                            </li>
+                            <li class="links__social-item">
+                                <a href="#" class="links__social-link">
+                                    <img class="links__social-link-icon" width="20" src="images/icon_youtube.svg" alt="логотип Ютуб">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="links__schedules">
+                            <p>пн-пт: 09:00 - 19:00, сб-вс: 10:00 - 18:00</p>
+                        </div>
+                        <ul class="links__list">
+                            <li class="links__list-item">
+                                <select class="links__select" name="cities" id="cities-select">
+                                    <option class="links__option" selected value="Москва">Москва</option>
+                                    <option class="links__option" value="Санкт-Петербург">Санкт-Петербург</option>
+                                    <option class="links__option" value="Екатеринбург">Екатеринбург</option>
+                                    <option class="links__option" value="Нижний Новгород">Нижний Новгород</option>
+                                </select>
+                            </li>
+                            <li class="links__list-item personal-area">
+                                <a class="links__list-link personal-area__link" href="#">Личный кабинет</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="container">
+                    <div class="info__wrapper">
+                        <div class="info__logo">
+                            <img class="info__logo-img" height="75" src="images/Real_logo.svg" alt="логотип автошколы Реал">
+                            <div class="info__logo-caption">
+                                <b>РЕАЛ</b>
+                                <p class="info__logo-caption-text">автошкола</p>
+                            </div>
+                        </div>
+                        <p class="info__number">+7 499 877 51 80</p>
+                        <a class="info__link" href="#">Заказать звонок</a>
+                        <div class="info__location">
+                            <img class="info__location-svg" width="16" height="20" src="images/icon_location_point.svg" alt="иконка локации">
+                            <p class="info__location-text">
+                                ул. Южнопортовая, д. 5, стр. 7
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input class="checkbox" id="checkbox" type="checkbox"/>
+            <label class="toggle" for="checkbox">
+                <span class="toggle__line toggle__line1"></span>
+                <span class="toggle__line toggle__line2"></span>
+                <span class="toggle__line toggle__line3"></span>
+            </label>
+            <div class="header__logo-mobile">
+                <img src="images/Real_logo_mobile.svg" alt="">
+            </div>
+            <nav class="nav">
+                <div class="container">
+                    <ul class="nav__list">
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__list-link">О нас</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__list-link">Цены</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__list-link">Акции</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__list-link">Инструкторы</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__list-link">Отзывы</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__list-link">Услуги</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__list-link">Контакты</a>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="#" class="nav__list-link">Наши филиалы</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="wrapper">
+        <main class="main">
+            <section class="preview">
+                <div class="container">
+                    <div class="preview__wrapper">
+                        <div class="preview__text-container">
+                            <h1 class="preview__title">Автошкола онлайн</h1>
+                            <p class="preview__position">
+                                <span class="preview__position-point">Главная ·</span>  
+                                Автошкола онлайн
+                            </p>
+                            <p class="preview__text">Онлайн обучение представляет из себя дистанционное изучение теоретической части. Теперь не стоит откладывать обучение из-за нехватки времени. Изучать материал можно в удобноевремя, с любого устройства и где бы Вы не нахо-дились. Уроки сделаны специалистами в максимально удобной для восприятия форме и доступныкаждому, 
+                                не зависимо от уровня подготовки. Онлайн курс позволит сэкономить не только время и деньги, но и сократить срок обучения.
+                            </p>
+                            <div class="preview__link">
+                                <a class="preview__link-request" href="#">Записаться</a>
+                            </div>
+                            <div class="preview__img">
+                                <img src="images/preview_img.png" alt="">
+                            </div>
+                            <div class="preview__img-mobile">
+                                <img src="images/preview_img-mobile.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="users">
+                <div class="container">
+                    <h2 class="users__title">Онлайн обучение выбирают</h2>
+                    <ul class="users__list">
+                        <li class="users__list-item element-animation">
+                            <img class="users__list-item-img" src="images/users1.svg" alt="">
+                            Мамы в декрете
+                        </li>
+                        <li class="users__list-item element-animation">
+                            <img class="users__list-item-img" src="images/users2.svg" alt="">
+                            Студенты
+                        </li>
+                        <li class="users__list-item element-animation">
+                            <img class="users__list-item-img" src="images/users3.svg" alt="">
+                            Люди проживающие за городом
+                        </li>
+                        <li class="users__list-item element-animation">
+                            <img class="users__list-item-img" src="images/users4.svg" alt="">
+                            Люди со сменным и ненормированным графикомработы                        
+                        </li>
+                        <li class="users__list-item element-animation">
+                            <img class="users__list-item-img" src="images/users5.svg" alt="">
+                            Для замены иностранного водительского удостоверения
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="advantages">
+                <div class="container">
+                    <h2 class="advantages__title">Преимущества дистанционного обучения</h2>
+                    <ul class="advantages__list">
+                        <li class="advantages__list-item element-animation">Низкая стоимость</li>
+                        <li class="advantages__list-item element-animation">Свободный график</li>
+                        <li class="advantages__list-item element-animation">Возможность повторного просмотра лекций</li>
+                        <li class="advantages__list-item element-animation">Доступ к личному кабинету 24/7</li>
+                        <li class="advantages__list-item element-animation">Сокращенный срок обучения</li>
+                        <li class="advantages__list-item element-animation">Использование любого устройства (телефон, планшет, компьютер)</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="promotion">
+                <div class="container">
+                    <div class="promotion__wrapper">
+                        <div class="promotion__container feedback-container bg-white">
+                            <div class="promotion__caption feedback-caption">
+                                <div class="promotion__text feedback-text">
+                                    <h2 class="promotion__title feedback-title">Запишись прямо сейчас и получи скидку на обучение</h2>
+                                    <p class="promotion__discount">Скидка  1 000 ₽ </p>
+                                </div>
+                                <div class="promotion__img">
+                                    <img src="images/promotion_img.png" alt="изображение машины с логотипом автошколы">
+                                </div>
+                            </div>
+                            <form class="promotion__form feedback-form" action="#">
+                                <input class="promotion__input feedback-input" type="text" placeholder="Ваше имя">
+                                <input class="promotion__input feedback-input" type="tel" placeholder="Ваш номер телефона">
+                                <button class="promotion__btn feedback-btn" type="submit">Записаться</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="start">
+                <div class="container">
+                    <div class="start__wrapper">
+                        <h2 class="start__title">
+                            Чтобы начать обучение, нет необходимости ждать набора группы, занятия начнутся в день заключения договора!
+                        </h2>
+                        <p class="start__text">
+                            Записаться и начать обучение можно не выходя из дома:
+                        </p>
+                        <ul class="start__list">
+                            <li class="start__list-item">
+                                <img class="start__list-item-img" src="images/start1.svg" alt="qr-код">
+                                Установить наше приложение «Автошкола РЕАЛ»
+                                <div class="start__list-item-links">
+                                    <a class="start__list-item-link" href="#">
+                                        <img src="images/app-store.svg" alt="">
+                                    </a>
+                                    <a class="start__list-item-link" href="#">
+                                        <img src="images/google-play.svg" alt="">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="start__list-item">
+                                <img class="start__list-item-img" src="images/start2.svg" alt="">
+                                Заполнить паспортные данные, выбрать филиал, пакет обучения и место встречи с инструктором.
+                            </li>
+                            <li class="start__list-item">
+                                <img class="start__list-item-img" src="images/start3.svg" alt="">
+                                Внести первоначальный взнос 4 900 рублей.
+                            </li>
+                        </ul>
+                        <ul class="start__list-2">
+                            <li class="start__list-2-item">
+                                <span class="start__list-2-item-text">
+                                    Далее с Вами свяжется наш менеджер для уточнения деталей.
+                                </span> 
+                            </li>
+                            <li class="start__list-2-item">
+                                <span class="start__list-2-item-text">
+                                    После оплаты, в личном кабинете, в разделе теория, появится весь теоретический материал, представ-ленный в виде видео-лекций, для каждой отдельной темы разработан подробный видео-урок, после про-смотра урока, для закрепления полученных знаний, необходимо пройти зачет в виде теста, если все пройдено без ошибок, открывается следующая тема, при необходимостилекцию можно пересмотреть неограниченное количество раз, в случае возникнове-ния вопросов, обратиться к консультанту.
+                                </span>
+                            </li>
+                            <li class="start__list-2-item">
+                                <span class="start__list-2-item-text">
+                                    Параллельно с теорией проходят уроки вождения. 
+                                    За Вами закрепляется опытный инструктор, запись на вождение осуществляется через личный кабинет, с возможностью выбора удобного дня и времени, при необходимости, запись можно отменить или перенести на другой день или время.
+                                </span>
+                            </li>
+                            <li class="start__list-2-item">
+                                <span class="start__list-2-item-text">
+                                    Срок обучения 2 месяца.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="stages">
+                <div class="container">
+                    <h2 class="stages__title">Этапы прохождения обучения</h2>
+                    <ul class="stages__list">
+                        <li class="stages__list-item">
+                            Изучение теоретической части
+                        </li>
+                        <li class="stages__list-item">
+                            Вождение с инструктором
+                        </li>
+                        <li class="stages__list-item">
+                            Внутренний экзамен в автошколе
+                        </li>
+                        <li class="stages__list-item">
+                            Экзамен в ГИБДД в сопровождении автошколы
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="price">
+                <div class="container">
+                    <div class="price__wrapper">
+                        <div class="price__caption">
+                            <h2 class="price__title">Стоимость обучения</h2>
+                            <select class="price__select" name="region" id="region-select">
+                                <option class="price__option" selected value="Орехово-Зуево">Орехово-Зуево</option>
+                                <option class="price__option" value="Москва">Москва</option>
+                                <option class="price__option" value="Химки">Химки</option>
+                                <option class="price__option" value="Сергиев Посад">Сергиев Посад</option>
+                                <option class="price__option" value="Одинцово">Одинцово</option>
+                            </select>
+                            <p class="price__text">
+                                Стоимость онлайн обучения значительно ниже очного курса, т.к в него не закладывается аренда учебного класса и оплата услуг препода- вателя, что позволяет Вам сэкономить денежные средства.
+                            </p>
+                        </div>
+                        <div class="price__card-group">
+                            <div class="price__card bg-white">
+                                <div class="price__card-wrapper">
+                                    <p class="price__service-name">
+                                        Онлайн
+                                        <img class="price__question" width="24" src="images/question_marker.svg" alt="">
+                                    </p>
+                                    <p class="price__old-line"><span class="price__old">38 000 ₽</span></p>
+                                    <p class="price__new">29 000 ₽ </p>
+                                    <p class="price__text-promo">акция «Счастливые часы»</p>
+                                    <p class="price__initial-fee">5 000 ₽ первоначальный взнос </p>
+                                    <button class="price__accordion">Показать что входит</button>
+                                    <ul class="price__list">
+                                        <li class="price__list-item">
+                                            Теория онлайн в мобильном приложении 
+                                        </li>
+                                        <li class="price__list-item">
+                                            Начало занятий в день обращения
+                                        </li>
+                                        <li class="price__list-item">
+                                            Стандартный курс вождения в удобное для Вас время
+                                        </li>
+                                        <li class="price__list-item">
+                                            Бензин и учебная литература
+                                        </li>
+                                        <li class="price__list-item">
+                                            Оформление документов  для ГИБДД
+                                        </li>
+                                        <li class="price__list-item">
+                                            Изучение экзаменационных маршрутов ГИБДД
+                                        </li>
+                                        <li class="price__list-item">
+                                            Сопровождение до получения прав
+                                        </li>
+                                        <li class="price__list-item">
+                                            Срок обучения 2 месяца
+                                        </li>
+                                    </ul>
+                                    <a class="price__link request" href="#">Записаться</a>
+                                </div>
+                            </div>
+                            <div class="price__card bg-white">
+                                <div class="price__card-wrapper">
+                                    <p class="price__service-name">
+                                        Онлайн +
+                                        <img class="price__question" width="24" src="images/question_marker.svg" alt="">
+                                    </p>
+                                    <p class="price__old-line"><span class="price__old">38 000 ₽</span></p>
+                                    <p class="price__new">32 000 ₽ </p>
+                                    <p class="price__text-promo">акция «Крути барабан»</p>
+                                    <p class="price__initial-fee">5 000 ₽ первоначальный взнос </p>
+                                    <button class="price__accordion">Показать что входит</button>
+                                    <ul class="price__list">
+                                        <li class="price__list-item">
+                                            Теория онлайн в мобильном приложении 
+                                        </li>
+                                        <li class="price__list-item">
+                                            Начало занятий в день обращения
+                                        </li>
+                                        <li class="price__list-item">
+                                            Расширенный курс вождения в удобное для Вас время
+                                        </li>
+                                        <li class="price__list-item">
+                                            Бензин и учебная литература
+                                        </li>
+                                        <li class="price__list-item">
+                                            Оформление документов  для ГИБДД
+                                        </li>
+                                        <li class="price__list-item">
+                                            Изучение экзаменационных маршрутов ГИБДД
+                                        </li>
+                                        <li class="price__list-item">
+                                        Сопровождение до получения прав
+                                        </li>
+                                        <li class="price__list-item">
+                                            Срок обучения 2 месяца
+                                        </li>
+                                    </ul>
+                                    <a class="price__link request" href="#">Записаться</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="trainers">
+                <div class="container">
+                    <div class="trainers__wrapper">
+                        <div class="trainers__caption">
+                            <h2 class="trainers__title">Инструкторы</h2>
+                            <select class="trainers__select region-select" name="region" id="region-select-1">
+                                <option class="trainers__option" selected value="Орехово-Зуево">Орехово-Зуево</option>
+                                <option class="trainers__option" value="Москва">Москва</option>
+                                <option class="trainers__option" value="Химки">Химки</option>
+                                <option class="trainers__option" value="Сергиев Посад">Сергиев Посад</option>
+                                <option class="trainers__option" value="Одинцово">Одинцово</option>
+                            </select>
+                            <p class="trainers__text">Эффективность обучения во многом зависит от инструктора, поэтому для нашей автошколы «Реал» мы отобрали квалифицированных водите-лей, имеющих не только большой стаж вождения, но и опыт в преподавании. Они доступно излагают материал, всегда готовы прийти на помощь, а также легко находят общий язык с аудиторией.</p>
+                            <p class="trainers__text">Для того чтобы вам проще было выбрать инструктора для себя, на нашем сайте реализована рейтинговая система. Вы сможете ознакомиться с портфолио конкретного специалиста, его оценкой и отзывами от предыдущих учеников.</p>
+                        </div>
+                        <div class="trainers__swiper swiper">
+                            <div class="trainers__swiper-wrapper swiper-wrapper">
+                                <div class="trainers__card bg-white swiper-slide">
+                                    <div class="trainers__img">
+                                        <img src="images/ovchinnikov-vanya.png" alt="">
+                                    </div>
+                                    <p class="trainers__name">Овчинников Иван Алексеевич</p>
+                                    <p class="trainers__experience">водительский стаж 10 лет</p>
+                                    <p class="trainers__rating">
+                                        Рейтинг инструктора
+                                        <span class="trainers__rating-num">4,9</span>
+                                    </p>
+                                </div>
+                                <div class="trainers__card bg-white swiper-slide">
+                                    <div class="trainers__img">
+                                        <img src="images/permyakov-andrey.png" alt="">
+                                    </div>
+                                    <p class="trainers__name">Пермяков Андрей Леонидович</p>
+                                    <p class="trainers__experience">водительский стаж 25 лет</p>
+                                    <p class="trainers__rating">
+                                        Рейтинг инструктора
+                                        <span class="trainers__rating-num">5,0</span>
+                                    </p>
+                                </div>
+                                <div class="trainers__card bg-white swiper-slide">
+                                    <div class="trainers__img">
+                                        <img src="images/ovchinnikov-vanya.png" alt="">
+                                    </div>
+                                    <p class="trainers__name">Овчинников Иван Алексеевич</p>
+                                    <p class="trainers__experience">водительский стаж 10 лет</p>
+                                    <p class="trainers__rating">
+                                        Рейтинг инструктора
+                                        <span class="trainers__rating-num">4,9</span>
+                                    </p>
+                                </div>
+                                <div class="trainers__card bg-white swiper-slide">
+                                    <div class="trainers__img">
+                                        <img src="images/permyakov-andrey.png" alt="">
+                                    </div>
+                                    <p class="trainers__name">Пермяков Андрей Леонидович</p>
+                                    <p class="trainers__experience">водительский стаж 25 лет</p>
+                                    <p class="trainers__rating">
+                                        Рейтинг инструктора
+                                        <span class="trainers__rating-num">5,0</span>
+                                    </p>
+                                </div>
+                                <div class="trainers__card bg-white swiper-slide">
+                                    <div class="trainers__img">
+                                        <img src="images/ovchinnikov-vanya.png" alt="">
+                                    </div>
+                                    <p class="trainers__name">Овчинников Иван Алексеевич</p>
+                                    <p class="trainers__experience">водительский стаж 10 лет</p>
+                                    <p class="trainers__rating">
+                                        Рейтинг инструктора
+                                        <span class="trainers__rating-num">4,9</span>
+                                    </p>
+                                </div>
+                                <div class="trainers__card bg-white swiper-slide">
+                                    <div class="trainers__img">
+                                        <img src="images/permyakov-andrey.png" alt="">
+                                    </div>
+                                    <p class="trainers__name">Пермяков Андрей Леонидович</p>
+                                    <p class="trainers__experience">водительский стаж 25 лет</p>
+                                    <p class="trainers__rating">
+                                        Рейтинг инструктора
+                                        <span class="trainers__rating-num">5,0</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainers__button-group button-group">
+                        <a class="trainers__link" href="#">Все инструкторы</a>
+                        <div class="trainers__slider-button-group">
+                            <button class="trainers__slider-btn swiper-button-prev" type="button">
+                                <img class="trainers__btn-img" src="images/arrow-left.svg" alt="стрелка влево">
+                            </button>
+                            <button class="trainers__slider-btn swiper-button-next" type="button">
+                                <img class="trainers__btn-img" src="images/arrow-right.svg" alt="стрелка направо">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="registration" id="registration">
+                <div class="container">
+                    <div class="registration__wrapper feedback-container bg-blue">
+                        <div class="registration__caption feedback-caption">
+                            <div class="registration__text feedback-text">
+                                <h2 class="registration__title feedback-title">Запишись на обучение прямо сейчас!</h2>
+                            </div>
+                            <div class="registration__img">
+                                <img src="images/registration_img.png" alt="изображение машины с логотипом автошколы">
+                            </div>
+                        </div>
+                        <form class="registration__form feedback-form" action="#">
+                            <input class="registration__input feedback-input" type="text" placeholder="Ваше имя">
+                            <input class="registration__input feedback-input" type="tel" placeholder="Ваш номер телефона">
+                            <button class="registration__btn feedback-btn" type="submit">Записаться</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="questions">
+                <div class="container">
+                    <div class="questions__wrapper">
+                        <h2 class="questions__title">Часто задаваемые вопросы</h2>
+                        <div class="questions__button-group">
+                            <button class="questions__accordion">С какого возраста можно начать обучение?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Если в ходе изучения теории возник вопрос?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Можно ли приостановить обучение?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Какова эффективность онлайн курса?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Какие документы необходимы?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Можно ли сократить или увеличить срок обучения?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                            <button class="questions__accordion">Когда начинается вождение?</button>
+                            <div class="questions__panel">
+                                <p>Начать обучение можно с 16 лет, сдать экзамены в 17 лет, в 18 лет получить права.</p>
+                            </div>
+                        </div>
+                        <a class="questions__link request" href="#registration">Записаться на обучение</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__links">
+                        <div class="footer__info">
+                            <div class="footer__logo">
+                                <img class="footer__logo-img" fill="#fff" height="75" src="images/Real_logo_white.svg" alt="логотип автошколы Реал">
+                                <div class="footer__logo-caption">
+                                    <p>РЕАЛ</p>
+                                    <p class="footer__logo-caption-text">автошкола</p>
+                                </div>
+                            </div>
+                            <p class="footer__number">+ 7 499 877 51 80</p>
+                            <p class="footer__location">115088, г. Москва, ул. Южнопортовая, д. 5, стр. 7</p>
+                            <p class="footer__schedules">пн-пт: 09:00 - 19:00, сб-вс: 10:00 - 18:00</p>
+                        </div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">Категория B (МКП)</li>
+                            <li class="footer__list-item">Категория B (АКП)</li>
+                            <li class="footer__list-item">Категория A,A1</li>
+                            <li class="footer__list-item">Категория AI</li>
+                            <li class="footer__list-item">Категория M</li>
+                        </ul>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Акции</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">О нас</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Галерея</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Контакты</a>
+                            </li>
+                        </ul>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Расписание</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Площадка</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Блог</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer__list-link">Филиалы</a>
+                            </li>
+                        </ul>
+                        <div class="footer__social">
+                            <ul class="footer__list-social">
+                                <li class="footer__list-social-item">
+                                    <a class="footer__list-social-link" href="#">
+                                        <img class="footer__list-social-link-img" src="images/logo_vk.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="footer__list-social-item">
+                                    <a class="footer__list-social-link" href="#">
+                                        <img class="footer__list-social-link-img" src="images/logo_instagram.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="footer__list-social-item">
+                                    <a class="footer__list-social-link" href="#">
+                                        <img class="footer__list-social-link-img" src="images/logo_youtube.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="footer__list-item-links">
+                                <a class="footer__list-item-link" href="#">
+                                    <img src="images/app-store.svg" alt="">
+                                </a>
+                                <a class="footer__list-item-link" href="#">
+                                    <img src="images/google-play.svg" alt="">
+                                </a>
+                                <a class="footer__yandex" href="#">
+                                    <span class="footer__yandex-text">Рейтинг организации в Яндексе</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__copyright">
+                        <div class="footer__copyright-column-1">
+                            <p>ИНН 50350445337</p>
+                            <p>КПП 503401001 / ОГРН 1135034000287</p>
+                        </div>
+                        <div class="footer__copyright-column-2">
+                            <p>@ 2013 - 2022 Автошкола "Реал"</p>
+                            <p>Все права защищены. Копирование материалов разрешено только с согласия правообладателя.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>  
+    <script src="js/main.min.js"></script>
+</body>
+</html>
